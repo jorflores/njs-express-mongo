@@ -1,0 +1,26 @@
+{
+  "name": "njs-express-mongo",
+  "version": "1.0.0",
+  "description": "* Dependencias utilizadas: path, express, morgan, mongoose",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorflores/njs-express-mongo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorflores/njs-express-mongo/issues"
+  },
+  "homepage": "https://github.com/jorflores/njs-express-mongo#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.25",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  }
+}
