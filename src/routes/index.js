@@ -42,7 +42,7 @@ router.get('/turn/:id', async (req, res, next) => {
 
 // Ruta que nos permita eliminar tareas
 
-router.delete('/delete/:id',  async (req,res) =>{
+router.get('/delete/:id',  async (req,res) =>{
     var id = req.params.id;
     await Task.remove({_id: id});
     res.redirect('/');
