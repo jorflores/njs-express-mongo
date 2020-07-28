@@ -31,10 +31,18 @@ router.post('/edit/:id',   async(req,res) =>{
     res.redirect('/');
     })
 
+    // Esta ruta permita modificar el estatus de una tarea por medio de su propiedad status.
+router.get('/turn/:id', async (req, res, next) => {
+    let { id } = req.params;
+    const task = await Task.findById(id);
+    task.status = !task.status;
+    await task.save();
+    res.redirect('/');
+  });
 
 // Ruta que nos permita eliminar tareas
 
-router.get('/delete/:id',  async (req,res) =>{
+router.delete('/delete/:id',  async (req,res) =>{
     var id = req.params.id;
     await Task.remove({_id: id});
     res.redirect('/');

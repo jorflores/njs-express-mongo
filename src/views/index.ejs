@@ -31,7 +31,6 @@
 <table class= "table table-bordered table-hover">
 
     <thead>
-
         <tr>
 
                 <th>#</th>
@@ -53,12 +52,9 @@
                 <td>  <%= tasks[i].description %> </td>
                 <td>
 
-                    <a class="btn btn-dark" href="turn">Done </a>
-                    <a href=/delete/<%= tasks[i]._id %>   class="btn btn-danger" href="turn">Delete </a>
-                    
-                    <a href=/edit/<%= tasks[i]._id %> class="btn btn-info" href="turn">Edit </a>
-
-
+                <a class="<%=   tasks[i].status ? 'btn btn-success' : 'btn btn-dark'     %>" href="/turn/<%= tasks[i]._id %>">Done</a>
+                <a href=/delete/<%= tasks[i]._id %>   class="btn btn-danger" href="turn">Delete </a>   
+                <a href=/edit/<%= tasks[i]._id %> class="btn btn-info" href="turn">Edit </a>
 
                 </td>
                 
